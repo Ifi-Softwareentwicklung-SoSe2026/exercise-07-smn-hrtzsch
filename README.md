@@ -15,7 +15,8 @@ tags: [Sommersemester2026, Softwareentwicklung, Übung07]
 
 -->
 
-[![LiaScript Course](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://liascript.github.io/course/?https://raw.githubusercontent.com/Ifi-Softwareentwicklung-SoSe2026/exercise_07/refs/heads/main/README.md)
+[![LiaScript Course](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://liascript.github.io/course/?https://raw.githubusercontent.com/Ifi-Softwareentwicklung-SoSe2026/exercise-07-smn-hrtzsch/refs/heads/main/README.md)
+[![CI Pipeline](https://github.com/Ifi-Softwareentwicklung-SoSe2026/exercise-07-smn-hrtzsch/actions/workflows/ci.yml/badge.svg)](https://github.com/Ifi-Softwareentwicklung-SoSe2026/exercise-07-smn-hrtzsch/actions/workflows/ci.yml)
 
 # Aufgabe 07
 
@@ -25,6 +26,7 @@ Softwareentwicklung SoSe2026
 ## 1. Continuous Integration (CI) Workflow
 
 - Softwaretests sind ein wichtiger Bestandteil der Softwareentwicklung, um sicherzustellen, dass die implementierte Funktionalität korrekt arbeitet und keine Regressionen auftreten.
+- Diese Zeile wurde fuer den Exercise07-E2E-Test ergaenzt.
 - Unit-Tests prüfen einzelne Komponenten oder Funktionen isoliert, während Integrationstests das Zusammenspiel mehrerer Komponenten testen.
 - Wir nutzen GitHub Actions, um die Tests automatisch auszuführen.
 - Um die Sichtbarkeit zu erhöhen werden oft Badges in der README.md eingebunden, die den aktuellen Status der Tests anzeigen.

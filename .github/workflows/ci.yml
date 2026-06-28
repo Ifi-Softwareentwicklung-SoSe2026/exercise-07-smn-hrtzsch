@@ -1,16 +1,17 @@
 name: CI Pipeline
 
-# This workflow is intentionally incomplete. Read it, change it, and extend it.
-
 on:
   push:
-    branches: [ main ]
+    branches: [ "**" ]
   pull_request:
     branches: [ main ]
 
 jobs:
-  build-and-test:
+  truth-table-quality-gate:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: csharp
 
     steps:
       - name: Checkout code
@@ -22,8 +23,10 @@ jobs:
           dotnet-version: 10.0.x
 
       - name: Restore dependencies
-        run: dotnet restore
+        run: dotnet restore TruthTable.slnx
 
       - name: Build project
-        run: dotnet build --no-restore --configuration Release -warnaserror # warnaserror: Treat warnings as errors
+        run: dotnet build TruthTable.slnx --no-restore --configuration Release -warnaserror
 
+      - name: Run tests
+        run: dotnet test TruthTable.slnx --no-build --configuration Release --verbosity normal
