@@ -33,3 +33,20 @@ jobs:
 
       - name: Run tests
         run: dotnet test TruthTable.slnx --no-build --configuration Release --verbosity normal
+
+      - name: Install Doxygen
+        working-directory: .
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y doxygen
+
+      - name: Generate RTF documentation
+        working-directory: .
+        run: doxygen Doxyfile
+
+      - name: Upload RTF documentation
+        uses: actions/upload-artifact@v4
+        with:
+          name: truth-table-rtf-documentation
+          path: docs/rtf/refman.rtf
+          if-no-files-found: error
