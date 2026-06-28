@@ -25,6 +25,9 @@ jobs:
       - name: Restore dependencies
         run: dotnet restore TruthTable.slnx
 
+      - name: Verify formatting
+        run: dotnet format TruthTable.slnx --verify-no-changes --verbosity diagnostic
+
       - name: Build project
         run: dotnet build TruthTable.slnx --no-restore --configuration Release -warnaserror
 

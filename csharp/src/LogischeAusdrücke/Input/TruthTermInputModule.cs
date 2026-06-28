@@ -28,10 +28,11 @@ public sealed class TruthTermInputModule
     /// <returns>Parsed truth term.</returns>
     public ParsedTruthTerm Parse(string? input)
     {
-        var parser = new Parser(input!);
+        string normalizedInput = input ?? string.Empty;
+        var parser = new Parser(normalizedInput);
         IExpressionNode rootClause = parser.ParseExpression();
 
-        return new ParsedTruthTerm(input!, rootClause);
+        return new ParsedTruthTerm(normalizedInput, rootClause);
     }
 
     /// <summary>
