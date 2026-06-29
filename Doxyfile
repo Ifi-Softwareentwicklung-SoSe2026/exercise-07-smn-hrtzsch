@@ -56,6 +56,11 @@ PROJECT_NUMBER         = 01
 
 PROJECT_BRIEF          = "Truth table generator and simplifier"
 
+# Exercise07 CI documentation artifact settings. These explicit values mirror
+# the detailed output section below and make the RTF target easy to review.
+GENERATE_RTF           = YES
+RTF_OUTPUT             = rtf
+
 # With the PROJECT_LOGO tag one can specify a logo or an icon that is included
 # in the documentation. The maximum height of the logo should not exceed 55
 # pixels and the maximum width should not exceed 200 pixels. Doxygen will copy
