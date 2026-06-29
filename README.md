@@ -27,6 +27,7 @@ Softwareentwicklung SoSe2026
 
 - Softwaretests sind ein wichtiger Bestandteil der Softwareentwicklung, um sicherzustellen, dass die implementierte Funktionalität korrekt arbeitet und keine Regressionen auftreten.
 - Diese Zeile wurde fuer den Exercise07-E2E-Test ergaenzt.
+- Diese Zeile testet den Lisa-Heartbeat am 2026-06-29.
 - Unit-Tests prüfen einzelne Komponenten oder Funktionen isoliert, während Integrationstests das Zusammenspiel mehrerer Komponenten testen.
 - Wir nutzen GitHub Actions, um die Tests automatisch auszuführen.
 - Um die Sichtbarkeit zu erhöhen werden oft Badges in der README.md eingebunden, die den aktuellen Status der Tests anzeigen.
